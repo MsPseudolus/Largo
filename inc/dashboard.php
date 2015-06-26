@@ -127,3 +127,15 @@ function largo_admin_menu() {
      remove_menu_page('link-manager.php');
 }
 add_action( 'admin_menu', 'largo_admin_menu' );
+
+function add_custom_admin_themes() {
+
+wp_admin_css_color(
+    'inn-dark',
+    __( 'INN Dark' ),
+    get_stylesheet_directory_uri() . '/css/admin/inn-dark.min.css',
+    array( '#EDF1F4', '#09C9FF', '#1C1C1C', '#F77710' )
+);
+
+}
+add_action( 'admin_init', 'add_custom_admin_themes' );
