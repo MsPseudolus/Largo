@@ -133,8 +133,15 @@ function add_custom_admin_themes() {
 wp_admin_css_color(
     'inn-dark',
     __( 'INN Dark' ),
-    get_stylesheet_directory_uri() . '/css/admin/inn-dark.min.css',
+    get_template_directory_uri() . '/css/admin/inn-dark.min.css',
     array( '#EDF1F4', '#09C9FF', '#1C1C1C', '#F77710' )
+);
+
+wp_admin_css_color(
+    'inn-newsprint',
+    __( 'Newsprint' ),
+    get_template_directory_uri() . '/css/admin/newsprint.min.css',
+    array( '#EDF1F4', '#AAA', '#777', '#1C1C1C' )
 );
 
 }
