@@ -25,7 +25,7 @@ if ( $query->have_posts() ) {
 				// if the sticky post is part of a series, see if there are any other posts in that series
 				$feature = largo_get_the_main_feature();
 				$feature_posts = largo_get_recent_posts_for_term( $feature, 3, 1 );
-			} ?>
+			} else $feature_posts = null; ?>
 
 			<div class="sticky-solo">
 
